@@ -1,0 +1,375 @@
+.bus-rental {
+  padding: 40px 0;
+  min-height: 80vh;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+/* Rental Form Section */
+.rental-form-section {
+  margin-bottom: 60px;
+}
+
+.form-card {
+  max-width: 100%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden; /* ensures no spill */
+}
+
+.form-card h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.rental-form .form-row {
+  display: flex;
+  flex-wrap: wrap;   /* allows wrapping if needed */
+  gap: 16px;         /* space between fields */
+  margin-bottom: 16px;
+}
+
+.rental-form .form-row:last-of-type {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Bus Types Section */
+.bus-types-section {
+  margin-bottom: 60px;
+}
+
+.bus-types-section h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.bus-types-section p {
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.bus-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.bus-type-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: 1px solid #e9ecef;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.bus-type-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.bus-type-header {
+  margin-bottom: 25px;
+}
+
+.bus-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.bus-type-header h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.capacity {
+  color: #6c757d;
+  font-size: 0.9rem;
+  background: #f8f9fa;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.bus-features {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.bus-features h4 {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.bus-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bus-features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.check-icon {
+  color: #28a745;
+  flex-shrink: 0;
+}
+
+.bus-price {
+  margin-bottom: 25px;
+}
+
+.price-range {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #28a745;
+  background: #e8f5e8;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.select-bus-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+}
+
+/* Quote Modal */
+.quote-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  color: #dc3545;
+}
+
+.quote-form {
+  padding: 30px;
+}
+
+.selected-bus-info {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.selected-bus-info h3 {
+  color: #2c3e50;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.selected-bus-info p {
+  color: #6c757d;
+  margin: 0;
+}
+
+.quote-form .form-row {
+  display: flex;
+  flex-wrap: wrap;   /* allows wrapping if needed */
+  gap: 16px;         /* space between fields */
+  margin-bottom: 16px;
+}
+
+.quote-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+/* Why Choose Us Section */
+.why-choose-section {
+  background: #f8f9fa;
+  padding: 60px 0;
+  border-radius: 12px;
+}
+
+.why-choose-section h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.feature-item {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.feature-item h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-item p {
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .rental-form .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .bus-types-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .quote-form .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .quote-actions {
+    flex-direction: column;
+  }
+  
+  .modal-content {
+    margin: 10px;
+  }
+  
+  .modal-header,
+  .quote-form {
+    padding: 20px;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .form-card {
+    padding: 25px;
+  }
+  
+  .bus-type-card {
+    padding: 25px;
+  }
+}

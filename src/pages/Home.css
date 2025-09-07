@@ -1,0 +1,145 @@
+/* Just Dial Section */
+.justdial-section {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  padding: 80px 0;
+}
+
+.justdial-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.justdial-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.justdial-info p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+}
+
+.star {
+  color: #ffd700;
+}
+
+.rating-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.justdial-btn {
+  background: white;
+  color: #ee5a24;
+  font-weight: 600;
+}
+
+.justdial-btn:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+.justdial-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-mockup {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.phone-mockup p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Contact Section */
+.contact-section {
+  background: #f8f9fa;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.contact-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.contact-content p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .justdial-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .justdial-info h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-content h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .phone-mockup {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .justdial-info h2,
+  .contact-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .rating {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
