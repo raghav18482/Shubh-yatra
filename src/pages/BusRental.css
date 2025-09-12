@@ -74,9 +74,11 @@
 }
 
 .bus-types-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px;
 }
 
 .bus-type-card {
@@ -87,6 +89,15 @@
   border: 1px solid #e9ecef;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  scroll-snap-align: start;
+  display: flex;
+  flex: 0 0 calc(33.333% - 20px); /* 3 cards per row, accounting for gap */
+  flex-direction: column;   /* stack vertically */
+  justify-content: space-between; /* push last item down */
+}
+
+.bus-types-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .bus-type-card:hover {
@@ -172,6 +183,7 @@
   justify-content: center;
   gap: 8px;
   padding: 12px 24px;
+  margin-top: auto; 
 }
 
 /* Quote Modal */
@@ -357,6 +369,19 @@
   
   .features-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .bus-type-card {
+    flex: 0 0 calc(50% - 20px); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .bus-type-card {
+    flex: 0 0 100%; /* 1 per row on mobile */
   }
 }
 

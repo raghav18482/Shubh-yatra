@@ -33,7 +33,7 @@ const Header = () => {
             </Link>
             <Link to="/tirth-yatra" className="nav-link">
               <MapPin className="nav-icon" />
-              Tirth Yatra
+              Plan Yatra
             </Link>
             <a 
               href="https://www.justdial.com" 

@@ -149,6 +149,43 @@ const TirthYatra = () => {
     setShowBookingForm(true);
   };
 
+  const handlePlanYatraWhatsApp = (destination) => {
+    // Validate Journey Form
+    if (!isJourneyFormFilled()) {
+      alert('fill the journey form');
+      return;
+    }
+    // Update selected destination in state
+    handleDestinationSelect(destination);
+
+    const selectedDestination = yatraDestinations.find(dest => dest.id === destination.id);
+
+    const message = `Tirth Yatra Planning Request:\n\nDestination: ${selectedDestination?.name || destination.id}\nDuration: ${selectedDestination?.duration || 'Custom'}\n\nTravel Details:\nStart Date: ${yatraData.startDate || '-'}\nEnd Date: ${yatraData.endDate || '-'}\nGroup Size: ${yatraData.groupSize || '-'}\nBudget: ${yatraData.budget || '-'}\nSpecial Requirements: ${yatraData.specialRequirements || '-'}\n\nI am interested in planning this yatra. Please contact me with available packages and details.`;
+
+    const whatsappUrl = `https://wa.me/919928545048?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const isJourneyFormFilled = () => {
+    return (
+      yatraData.destination &&
+      yatraData.startDate &&
+      yatraData.endDate &&
+      yatraData.groupSize &&
+      yatraData.budget
+    );
+  };
+
+  const handleChoosePackage = (pkg) => {
+    // Validate Journey Form before opening contact modal
+    if (!isJourneyFormFilled()) {
+      alert('fill the journey form');
+      return;
+    }
+    setSelectedPackage(pkg);
+    setShowBookingForm(true);
+  };
+
   const handleBookingSubmit = (e) => {
     e.preventDefault();
     
@@ -316,7 +353,7 @@ Please provide a detailed itinerary and quote for this Tirth Yatra planning requ
                   </div>
                   <button 
                     className="btn btn-primary select-destination-btn"
-                    onClick={() => handleDestinationSelect(destination)}
+                    onClick={() => handlePlanYatraWhatsApp(destination)}
                   >
                     Plan This Yatra
                     <ArrowRight size={16} />
@@ -360,7 +397,7 @@ Please provide a detailed itinerary and quote for this Tirth Yatra planning requ
                 
                 <button 
                   className={`btn ${pkg.id === 'standard' ? 'btn-primary' : 'btn-secondary'} select-package-btn`}
-                  onClick={() => handlePackageSelect(pkg)}
+                  onClick={() => handleChoosePackage(pkg)}
                 >
                   Choose Package
                   <ArrowRight size={16} />
