@@ -35,7 +35,6 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">Quick Links</h3>
             <ul className="footer-links">
-              <li><Link to="/" className="footer-link">Home</Link></li>
               <li><Link to="/bus-booking" className="footer-link">Bus Booking</Link></li>
               <li><Link to="/bus-rental" className="footer-link">Bus Rental</Link></li>
               <li><Link to="/tirth-yatra" className="footer-link">Tirth Yatra</Link></li>

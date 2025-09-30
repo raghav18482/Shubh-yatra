@@ -22,7 +22,6 @@ const Header = () => {
           </div>
 
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
-            <Link to="/" className="nav-link">Home</Link>
             <Link to="/bus-booking" className="nav-link">
               <Calendar className="nav-icon" />
               Bus Booking
